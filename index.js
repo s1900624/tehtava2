@@ -2,6 +2,8 @@ window.onload = function() {
     const runnerImgs = ['runner1.png', 'runner2.png', 'runner3.png', 'runner4.png'];
 
     const runnerImageId = document.getElementById('runner-image');
+
+    const buttonStart = document.getElementById('start');
     const buttonStop = document.getElementById('stop');
 
     let count = 0;
@@ -14,6 +16,6 @@ window.onload = function() {
         }, 60);
     }
 
-    runner();
+    buttonStart.onclick = () => runner();
     buttonStop.onclick = () => clearTimeout(runnerId);
 };
